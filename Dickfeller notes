@@ -1,0 +1,35 @@
+
+Research on Times serie :
+Time series are stationary if they do not have trend or seasonal effects. 
+Summary statistics calculated on the time series are consistent over time, like the mean or the variance of the observations.
+Observations from a non-stationary time series show seasonal effects, trends, and other structures that depend on the time index.
+
+
+    Stationary Process: A process that generates a stationary series of observations.
+    Stationary Model: A model that describes a stationary series of observations.
+    Trend Stationary: A time series that does not exhibit a trend.
+    Seasonal Stationary: A time series that does not exhibit seasonality.
+    Strictly Stationary: A mathematical definition of a stationary process, specifically that the joint distribution of observations is invariant to time shift.
+
+summary  statistic test:
+You can split your time series into two (or more) partitions and compare the mean and variance of each group.
+If they differ and the difference is statistically significant, the time series is likely non-stationary.
+
+Augmented Dickey-Fuller test
+
+Statistical tests make strong assumptions about your data. They can only be used to inform the degree to which a null hypothesis can be rejected or fail to be reject. 
+The result must be interpreted for a given problem to be meaningful.
+
+source :https://machinelearningmastery.com/time-series-data-stationary-python/
+	
+from pandas import read_csv
+from statsmodels.tsa.stattools import adfuller
+series = read_csv('daily-total-female-births.csv', header=0, index_col=0, squeeze=True)
+X = series.values
+result = adfuller(X)
+print('ADF Statistic: %f' % result[0])
+print('p-value: %f' % result[1])
+print('Critical Values:')
+for key, value in result[4].items():
+	print('\t%s: %.3f' % (key, value))
+  
