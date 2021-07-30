@@ -34,6 +34,8 @@ def Dickfeller_statTest(series):
 	X = series.values
 	result = adfuller(X)
 	print('ADF Statistic: %f' % result[0])
+	
+https://www.survivrelondres.co.uk/wp-content/uploads/2018/06/Fonctions-de-Bloomberg.pdf
 	print('p-value: %f' % result[1])
 	print('Critical Values:')
 	for key, value in result[4].items():
