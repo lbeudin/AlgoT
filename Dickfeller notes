@@ -41,3 +41,4 @@ https://www.survivrelondres.co.uk/wp-content/uploads/2018/06/Fonctions-de-Bloomb
 	for key, value in result[4].items():
 		print('\t%s: %.3f' % (key, value))
 
+https://www.survivrelondres.co.uk/wp-content/uploads/2018/06/Fonctions-de-Bloomberg.pdf
