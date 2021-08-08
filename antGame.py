@@ -155,14 +155,16 @@ length_tab=8
 print("Adjacente moves only")
 antGameStart(number_simulation,length_tab,secondForAMove,0)
 #With diag moves
-print("Diagnale moves allowed")
+print("Diagonale moves allowed")
 antGameStart(number_simulation,length_tab,secondForAMove,1)
-print("Diagnale moves allowed")
+print("Diagonale moves allowed and previous moves not allowed")
 antGameStart(number_simulation,length_tab,secondForAMove,2)
- 
+
 """
 Average step :  82.655527  average step sec :  826.5552700000001
 Average step :  94.484044  average step sec :  944.84044
+Average step :  86.183913  average step sec :  861.8391300000001
+
 """
     
     
